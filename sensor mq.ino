@@ -1,8 +1,8 @@
 int sensorValue;
-int buzzerPin = 10;
-int greenLED = 9;
-int redLED = 8;
-int sensorPin = 14;
+int buzzerPin = ""; // sesuaikan pin yang akan digunakan
+int greenLED = ""; // sesuaikan pin yang akan digunakan
+int redLED = ""; // sesuaikan pin yang akan digunakan
+int sensorPin = ""; // sesuaikan pin yang akan digunakan
 
 void setup() {
   Serial.begin(9600); // sets the serial port to 9600
@@ -18,7 +18,7 @@ void loop() {
   Serial.print("AirQuality Value: ");
   Serial.println(sensorValue, DEC);               // prints the value read
 
-  if (sensorValue > 300) {
+  if (sensorValue > "") { // silahkan isi nilai keinginan batas deteksi sensor
     digitalWrite(greenLED, LOW);
     digitalWrite(buzzerPin, HIGH);
     digitalWrite(redLED, HIGH);
